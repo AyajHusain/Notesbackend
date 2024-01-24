@@ -3,18 +3,8 @@ const cors = require('cors')
 
 const app = express()
 app.use(express.json())
-
 app.use(cors())
-
-// const requestLogger = (request,response,next) =>{
-//   console.log("body", request.body)
-//   console.log("method",request.method)
-//   console.log("path", request.path)
-//   console.log("---")
-//   next()
-// }
-
-// app.use(requestLogger)
+app.use(express.dist('dist'))
 
 let notes = [
     {
